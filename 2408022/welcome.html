@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+
+<div class="welcome-card">
+    <h1 id="welcomeText">Welcome 👋</h1>
+    <p>We’re happy to see you!</p>
+    <button onclick="goToDashboard()">Get Started</button>
+</div>
+
+<script>
+    const user = localStorage.getItem("loggedInUser");
+
+    if (user) {
+        document.getElementById("welcomeText").innerText =
+            "Welcome Back, " + user + " 👋";
+    }
+
+    function goToDashboard() {
+        window.location.href = "dashboard.html";
+    }
+</script>
+
+</body>
+</html>

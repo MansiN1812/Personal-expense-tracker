@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPENSE TRACKER</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    
+    <div class="container">
+       
+    <div class="dashboard">
+        <h1>Expense Tracker Dashboard</h1>
+        <div class="top-bar">
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+        
+        <!--top cards-->
+        <div class="summary">
+            <div class="card">
+                <h4>Balance: $0</h4>
+            </div>
+            <div class="card">
+                <h4>Income: $0</h4></div>
+            <div class="card">
+                <h4>Expense: $0</h4>
+        </div>
+        </div>
+    
+    
+    <!--Main-->
+    <div class="main">
+        <div class="transaction">
+            <h3>Transaction</h3>
+            <ul id="transactionlist"></ul>
+        </div>
+        <!--Right Add transaction-->
+        <div class="add-transaction">
+            <h3>Add transaction</h3>
+            <input type="text" id="desc" placeholder="where you spent">
+            <input type="number" id="amount" placeholder="amount">
+            <select id="type">
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+                
+            </select>
+            <button  type="button"onclick="addTransaction()">Add</button>
+        </div>
+        <ul id="transaction"></ul>
+    </div>
+    <script src="dashboard.js"></script>
+    
+    
+</body>
+</html>
